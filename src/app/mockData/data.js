@@ -19,5 +19,10 @@ export const NavbarMenu = [
         title: "contacto",
         link: "../pages/contact"
     },
+    {
+        id: 5,
+        title: "car",
+        link: "../pages/car"
+    },
 
 ];

@@ -14,6 +14,11 @@ import ResponsiveMenu from "./ResponsiveMenu";
 export const Navbar = () => {
   const [open, setOpen] = React.useState(false);
 
+  // Función para cerrar el menú móvil
+  const handleCloseMenu = () => {
+    setOpen(false);
+  };
+
   return (
     <>
       <nav className="bg-slate-800">
@@ -93,7 +98,8 @@ export const Navbar = () => {
       </nav>
 
       {/* Mobile Sidebar section */}
-      <ResponsiveMenu open={open} />
+      {/* Pasamos la función handleCloseMenu al menú móvil */}
+      <ResponsiveMenu open={open} onClose={handleCloseMenu} />
     </>
   );
 };

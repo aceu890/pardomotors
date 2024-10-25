@@ -75,7 +75,7 @@ export default function Home() {
 
       <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
         <CarGallery />
-        <ViewAllButton />
+        <ViewAllButton buttonText="Ver Todo" linkUrl="/pages/catalogo" />
       </motion.div>
 
       <motion.div initial="hidden" animate="visible" variants={fadeInUp}>

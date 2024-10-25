@@ -56,7 +56,7 @@ export default function CarGallery() {
             key={car.id}
             className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
           >
-            <div className="relative overflow-hidden flex-grow">
+            <Link href="/pages/car" className="relative overflow-hidden flex-grow">
               <Image
                 src={car.image}
                 alt={`${car.brand} ${car.year}`}
@@ -65,7 +65,7 @@ export default function CarGallery() {
                 height={300}
                 className="transition-transform duration-300 ease-in-out transform hover:scale-110 object-cover"
               />
-            </div>
+            </Link>
             <div className="p-4 flex justify-between items-center flex-grow-0">
               <div className="flex flex-col">
                 <h2 className="text-xl font-bold">{car.brand}</h2>
@@ -73,18 +73,16 @@ export default function CarGallery() {
               </div>
               <p className="text-red-500 font-semibold text-2xl">{car.price}</p>
             </div>
-
             <Link
-              href={"#"}
-              className="bg-gray-800  text-white text-center py-2 px-4 rounded hover:bg-orange-600 transition w-full font-bold"
+              href="/pages/car"
+              className="bg-gray-800 text-white text-center py-2 px-4 rounded hover:bg-orange-600 transition w-full font-bold"
             >
               Ver Auto
             </Link>
           </div>
         ))}
       </div>
-   {/* paginación */}
-
+      {/* paginación */}
     </div>
   );
 }
